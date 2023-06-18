@@ -12,7 +12,8 @@ class RoomControl:
 
     @staticmethod
     def cycle_temp_update():
-        RoomControl.temperature += round((random.uniform(0, 2) - 0.2), 1)
+        RoomControl.temperature += random.uniform(-1, 1)
+        RoomControl.temperature = round(RoomControl.temperature, 1)
         threading.Timer(5, RoomControl.cycle_temp_update).start()
 
     def __init__(self):

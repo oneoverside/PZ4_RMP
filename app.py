@@ -23,7 +23,7 @@ def get_info():
     })
 
 
-@app.route('/log', methods=['POST'])
+@app.route('/updateData', methods=['POST'])
 def log():
     data = request.get_json()
     room_name = data.get('room')
